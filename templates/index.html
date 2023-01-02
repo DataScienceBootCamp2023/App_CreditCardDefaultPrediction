@@ -1,0 +1,106 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Credit Card Default Prediction</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+<!-- index.html (continued) -->
+
+<div id="form-container">
+  <h1>Credit Card Default Prediction</h1>
+  <form method="post" action="/predict" enctype="multipart/form-data">
+    <label for="limit_bal">Limit Balance</label>
+    <input type="number" id="limit_bal" name="limit_bal" required>
+    <br>
+    <label for="sex">Sex</label>
+    <select id="sex" name="sex" required>
+      <option value="2">Female</option>
+      <option value="1">Male</option>
+    </select>
+    <br>
+    <label for="education">Education</label>
+    <select id="education" name="education" required>
+      <option value="5">Advanced/Professional</option>
+      <option value="4">College</option>
+      <option value="3">High School</option>
+      <option value="2">Other</option>
+      <option value="1">University</option>
+    </select>
+    <br>
+    <label for="marriage">Marriage</label>
+    <select id="marriage" name="marriage" required>
+      <option value="3">Divorced</option>
+      <option value="2">Married</option>
+      <option value="1">Single</option>
+      <option value="0">Other</option>
+    </select>
+    <br>
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" required>
+    <br>
+    <label for="pay_1">Pay 1</label>
+    <input type="number" id="pay_1" name="pay_1" required>
+    <br>
+    <label for="pay_2">Pay 2</label>
+    <input type="number" id="pay_2" name="pay_2" required>
+    <br>
+    <label for="pay_3">Pay 3</label>
+    <input type="number" id="pay_3" name="pay_3" required>
+    <br>
+    <label for="pay_4">Pay 4</label>
+    <input type="number" id="pay_4" name="pay_4" required>
+    <br>
+    <label for="pay_5">Pay 5</label>
+    <input type="number" id="pay_5" name="pay_5" required>
+    <br>
+    <label for="pay_6">Pay 6</label>
+    <input type="number" id="pay_6" name="pay_6" required>
+    <br>
+    <label for="bill_amt_1">Bill Amount 1</label>
+    <input type="number" id="bill_amt_1" name="bill_amt_1" required>
+    <br>
+    <label for="bill_amt_2">Bill Amount 2</label>
+    <input type="number" id="bill_amt_2" name="bill_amt_2" required>
+    <br>
+    <label for="bill_amt_3">Bill Amount 3</label>
+    <input type="number" id="bill_amt_3" name="bill_amt_3" required>
+    <br>
+    <label for="bill_amt_4">Bill Amount 4</label>
+    <input type="number" id="bill_amt_4" name="bill_amt_4" required>
+    <br>
+    <label for="bill_amt_5">Bill Amount 5</label>
+    <input type="number" id="bill_amt_5" name="bill_amt_5" required>
+    <br>
+    <label for="bill_amt_6">Bill Amount 6</label>
+    <input type="number" id="bill_amt_6" name="bill_amt_6" required>
+    <br>
+    <label for="pay_amt_1">Pay Amount 1</label>
+    <input type="number" id="pay_amt_1" name="pay_amt_1" required>
+    <br>
+    <label for="pay_amt_2">Pay Amount 2</label>
+    <input type="number" id="pay_amt_2" name="pay_amt_2" required>
+    <br>
+    <label for="pay_amt_3">Pay Amount 3</label>
+    <input type="number" id="pay_amt_3" name="pay_amt_3" required>
+    <br>
+    <label for="pay_amt_4">Pay Amount 4</label>
+    <input type="number" id="pay_amt_4" name="pay_amt_4" required>
+    <br>
+    <label for="pay_amt_5">Pay Amount 5</label>
+    <input type="number" id="pay_amt_5" name="pay_amt_5" required>
+    <br>
+    <label for="pay_amt_6">Pay Amount 6</label>
+    <input type="number" id="pay_amt_6" name="pay_amt_6" required>
+    <br>
+  <button type="submit" id="predict-button">Predict</button>
+  </form>
+</div>
+</body>
+</html>
+
+
