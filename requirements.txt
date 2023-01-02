@@ -1,5 +1,5 @@
-flask
-pandas
 xlsxwriter
-scikit-learn
 gunicorn
+flask==1.1.2
+pandas==1.0.5
+scikit-learn==0.23.1
