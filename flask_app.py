@@ -7,7 +7,7 @@
 import flask
 import pandas as pd
 
-from model.credit_card_default_prediction import CreditCardDefaultPrediction
+from models.credit_card_default_prediction import CreditCardDefaultPrediction
 from settings import config
 
 ## app
@@ -26,13 +26,11 @@ def index():
 			## data from client
 			app.logger.info(flask.request.files)
 			app.logger.info(flask.request.form)
-			dtf_credit_data = pd.read_excel(flask.request.files["dtf_credit_data"])
-			dtf_model_data = pd.read_excel(flask.request.files["dtf_model_data"])
-
+			dtf_input = pd.read_excel(flask.request.files["dtf_input"])
 			app.logger.warning("--- Inputs Received ---")
 
-			## match
-			model = CreditCardDefaultPrediction(dtf_credit_data, dtf_model_data)
+			## Predict
+			model = CreditCardDefaultPrediction(dtf_input)
 
 			return flask.send_file(attachment_filename='CreditCardDefaultPrediction.xlsx', as_attachment=True)             
 		else:
