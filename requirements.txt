@@ -19,4 +19,3 @@ scipy==1.9.3
 six==1.16.0 
 Werkzeug==2.2.2
 xlrd==2.0.1
-pickle5==0.0.12 
