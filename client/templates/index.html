@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+
+{% block title %} Strings Matcher {% endblock %}
+
+{% block head %}
+ {{ super() }}
+{% endblock %}
+
+{% block body %}
+
+</form>
+<h3>Credit Card Default Prediction</h3>
+<!-- INPUT FORM -->
+
+<br><h5>Upload your Excel file with the credit card data
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Upload excel file with the credit card data"><span class="fa fa-info-circle"></span></button>
+</h5>
+<form method="post" enctype="multipart/form-data">
+    <br><div class="container"><div class="form-row">
+        <div class="col form-group">
+            <h6>Credit card data
+                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Excel file with the credit card data"><span class="fa fa-info-circle"></span></button>
+            </h6>
+            <div class="file-upload-wrapper">
+                <input type="file" name="dtf_input" id="input-file-now" class="file-upload" required value={{request.form.dtf_input}}>
+            </div>
+        </div>
+
+    <div class="col form-group"></div>
+</div></div>
+
+<script>
+    $(".file-upload").file_upload();
+</script>
+
+<br><br><button type="submit" class="btn btn-primary" id="btnPredict">Predict</button>
+</form>
+
+{% endblock %}
