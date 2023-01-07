@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.pipeline import Pipeline
 from sklearn.base import BaseEstimator, TransformerMixin
-import pickle5 as pickle
+import pickle
 
 class CreditCardDefaultPrediction():
     def __init__(self, dtf_input):
