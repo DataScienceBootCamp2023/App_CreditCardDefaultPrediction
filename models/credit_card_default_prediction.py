@@ -23,7 +23,7 @@ class CreditCardDefaultPrediction():
         # Use the model to Make predictions on the input data
         predictions = model.predict(self.dtf_input.iloc[:, 1:-1])
         # Create a dataframe with the predictions and the original data
-        dtf_predictions = pd.concat([self.dtf_input.iloc[:, 0], pd.DataFrame(predictions, columns=["default"])], axis=1)
+        dtf_predictions = pd.concat([self.dtf_input.iloc[:, :], pd.DataFrame(predictions, columns=["default"])], axis=1)
         dtf_predictions["default"] = dtf_predictions["default"].apply(lambda x: "Yes" if x==1 else "No"
 
         return dtf_predictions
